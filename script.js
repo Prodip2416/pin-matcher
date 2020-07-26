@@ -26,9 +26,9 @@ function generateRandomNumber() {// Generate Random number method/ Function
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');// get all the number button value
-var userInputValue = document.getElementById("userInputValue");
+var userInputValue = document.getElementById("userInputValue"); // find user input field
 
-for (var i = 0; i < numberButtons.length; i++) {
+for (var i = 0; i < numberButtons.length; i++) {//loop thru all of button than get and set value to user input field
     numberButtons[i].addEventListener('click', function () {
         userInputValue.value = userInputValue.value + this.id;
         userInputValue.style.color = 'white';
