@@ -49,9 +49,10 @@ function changeInputFieldColorBgColorTextAline(changesID) {
 
 submitButton.addEventListener('click', function () {// Submit value and random value check
     if (parseInt(randomInputField.value) == parseInt(userInputField.value)) {
-        submitCount = 0;
         successStatus.style.display = 'inline';
         wrongStatus.style.display = 'none';
+        submitCount = 0;
+        btnClickCount.innerText = 3;
     } else {
         submitCount++;
         wrongStatus.style.display = 'inline';
@@ -71,12 +72,12 @@ backspaceButton.addEventListener('click', function () { // last item remove from
     }
 });
 
-function checkTotalSubmit(submitCount){ // Span value change how try are left?
-    if(submitCount == 1){
+function checkTotalSubmit(submitCount) { // Span value change how try are left?
+    if (submitCount == 1) {
         btnClickCount.innerText = 2;
-    }else if(submitCount == 2){
+    } else if (submitCount == 2) {
         btnClickCount.innerText = 1;
-    }else if(submitCount == 3){
+    } else if (submitCount == 3) {
         btnClickCount.innerText = 0;
         submitButton.disabled = true;
         submitButton.style.backgroundColor = 'gray';
